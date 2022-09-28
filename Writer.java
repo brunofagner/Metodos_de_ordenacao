@@ -3,7 +3,7 @@ class Writer {
 
     void writeDocument(int array[], String nomeArquivo, String nomeAlg, String tempoExecucao, Long comparacoes, Long movimentos) {
         try {
-            File file = new File(nomeAlg+"/"+nomeArquivo+"Sorted.txt");
+            File file = new File("ordenados/"+nomeAlg+"/"+nomeArquivo+"Sorted.txt");
             FileWriter writer = new FileWriter(file);
             PrintWriter print = new PrintWriter(writer);
             print.println("Nome do aluno: Bruno Fagner Alves de Carvalho e Costa");

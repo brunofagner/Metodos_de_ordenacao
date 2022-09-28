@@ -1,4 +1,9 @@
 import java.util.Scanner;
+
+import metodosComplexos.ComboSort;
+import metodosComplexos.QuickSort;
+import metodosComplexos.ShellSort;
+import metodosComplexos.Ordenador;
 import java.io.File;
 import java.io.FileNotFoundException;
 
