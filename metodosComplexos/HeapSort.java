@@ -5,13 +5,13 @@ public class HeapSort extends Ordenador {
             int tamanho = array.length;
             int i = tamanho / 2, pai, filho, t;
             while (true) {
-                  contOp++;
+                  contComp++;
                   if (i > 0) {
                         i--;
                         t = array[i];
                   } else {
                         tamanho--;
-                        contOp++;
+                        contComp++;
                         if (tamanho <= 0) {
                               return array;
                         }
@@ -21,11 +21,11 @@ public class HeapSort extends Ordenador {
                   pai = i;
                   filho = ((i * 2) + 1);
                   while (filho < tamanho) {
-                        contOp+=2;
+                        contComp+=2;
                         if ((filho + 1 < tamanho) && (array[filho + 1] > array[filho])) {
                               filho++;
                         }
-                        contOp++;
+                        contComp++;
                         if (array[filho] > t) {
                               array[pai] = array[filho];
                               pai = filho;

@@ -15,15 +15,15 @@ public class QuickSort extends Ordenador {
         
             int pivotIndex = new Random().nextInt(highIndex - lowIndex) + lowIndex;
             int pivot = array[pivotIndex];
-            contOp+=2;
+            contComp+=2;
             swap(array, pivotIndex, highIndex);
         
             int leftPointer = partition(array, lowIndex, highIndex, pivot);
-            contOp++;
+            contComp++;
             quickSort(array, lowIndex, leftPointer - 1);
-            contOp++;
+            contComp++;
             quickSort(array, leftPointer + 1, highIndex);
-            contOp++;
+            contComp++;
             return array;
       }
         
@@ -34,12 +34,12 @@ public class QuickSort extends Ordenador {
             while (leftPointer < rightPointer) {
                         
                   while (array[leftPointer] <= pivot && leftPointer < rightPointer) {
-                        contOp++;
+                        contComp++;
                         leftPointer++;
                   }
         
                   while (array[rightPointer] >= pivot && leftPointer < rightPointer) {
-                        contOp++;
+                        contComp++;
                         rightPointer--;
                   }
         
@@ -57,11 +57,11 @@ public class QuickSort extends Ordenador {
           }
         
           private void swap(int[] array, int index1, int index2) {
-            contOp++;
+            contComp++;
             int temp = array[index1];
             array[index1] = array[index2];
             array[index2] = temp;
-            contOp+=2;
+            contComp+=2;
             contMov++;
           }
         

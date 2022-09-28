@@ -7,19 +7,19 @@ public class BubbleSort extends Ordenador{
           int aux;
           for (int i = 0; i < array.length; i++) {
              for (int j = i+1; j < array.length; j++) {
-                this.contOp++;
+                this.contComp++;
                 if (array[i] > array[j]) {
                    aux = array[j];
-                   this.contOp++;
+                   this.contComp++;
                    array[j] = array[i];
-                   this.contOp++;
+                   this.contComp++;
                    array[i] = aux;
-                   this.contOp++;
+                   this.contComp++;
                    this.contMov++;
                 }
-                this.contOp++;
+                this.contComp++;
              }
-             this.contOp++;
+             this.contComp++;
           }
           
           return array;

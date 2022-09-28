@@ -42,7 +42,7 @@ public class MergeSort extends Ordenador {
             int i = 0, j = 0, k = 0;
 
             while (i < leftSize && j < rightSize) {
-                  contOp++;
+                  contComp+=2;
                   if (leftHalf[i] <= rightHalf[j]) {
                         array[k] = leftHalf[i];
                         contMov++;

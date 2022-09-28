@@ -13,7 +13,7 @@ public class BogoSort extends Ordenador{
                               int temp = array[i];
                               array[i] = array[j];
                               array[j] = temp;
-                              contOp += 5;
+                              contComp += 5;
                               contMov++;
                         }
             }
@@ -25,7 +25,7 @@ public class BogoSort extends Ordenador{
                if (numeros[j] < numeros[j-1]) {
                   return false;
                }
-               contOp++;
+               contComp++;
             }
             return true;
          }

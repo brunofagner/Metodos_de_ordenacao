@@ -6,16 +6,16 @@ class InsertionSort extends Ordenador{
          for (int i = 1; i < tamanho; ++i) {
             int chave = array[i];
             int j = i - 1;
-            contOp++;
+            contComp++;
             while (j >= 0 && array[j] > chave) {
                contMov++;
-               contOp++;
+               contComp++;
                array[j + 1] = array[j];
-               contOp++;
+               contComp++;
                j = j - 1;
             }
             array[j + 1] = chave;
-            contOp++;
+            contComp++;
          }
          return array;
       }

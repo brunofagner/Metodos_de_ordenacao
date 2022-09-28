@@ -13,12 +13,12 @@ public class ComboSort extends Ordenador{
             int i = 0;
             swapped = false;
             while (i + gap < array.length) {
-                  contOp++;
+                  contComp++;
                if (array[i] > array[i + gap]) {
                   int aux = array[i];
                   array[i] = array[i + gap];
                   array[i + gap] = aux;
-                  contOp += 4;
+                  contComp += 4;
                   contMov++;
                   swapped = true;
 

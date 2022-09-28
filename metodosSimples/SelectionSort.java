@@ -5,23 +5,23 @@ public class SelectionSort extends Ordenador{
           int n = array.length;
 
           for (int i = 0; i < n - 1; i++) {
-              contOp++;
+              contComp++;
               int min = i;
    
               for (int j = i + 1; j < n; j++) {
                   if (array[j] < array[min]) {
                       min = j;
-                      contOp++;
+                      contComp++;
                   }
-                  contOp++;
+                  contComp++;
               }
    
               int temp = array[min];
-              contOp++;
+              contComp++;
               array[min] = array[i];
-              contOp++;
+              contComp++;
               array[i] = temp;
-              contOp++;
+              contComp++;
               contMov++;
           }
           return array;

@@ -21,12 +21,13 @@ public class Main {
                   System.out.println("4-ComboSort!");
                   System.out.println("5-BogoSort!");
                   System.out.println("6-ShellSort!");
-                  System.out.println("7-QuickSort");
-                  System.out.println("8-MergeSort");
-                  System.out.println("9-HeapSort");
-                  System.out.println("10-Sair!");
+                  System.out.println("7-QuickSort!");
+                  System.out.println("8-MergeSort!");
+                  System.out.println("9-HeapSort!");
+                  System.out.println("10-GnomeSort!");
+                  System.out.println("14-Sair!");
                   int algoritmo = input.nextInt();
-                  if (algoritmo == 10) {
+                  if (algoritmo > 13) {
                         break;
                         
                   }
@@ -76,6 +77,9 @@ public class Main {
                               }else if (algoritmo == 9) {
                                     ordenador = new HeapSort();
                                     nomeAlg = "HeapSort";
+                              }else if (algoritmo == 10) {
+                                    ordenador = new GnomeSort();
+                                    nomeAlg = "GnomeSort";
                               } else {
                                     break;
                               }
@@ -96,7 +100,7 @@ public class Main {
                               System.out.println("Tempo para " + tamanhoArquivo[i]);
                               System.out.println(tempo);
 
-                              writer.writeDocument(sorted, nomesArquivo[i], nomeAlg, tempo, ordenador.contOp, ordenador.contMov);
+                              writer.writeDocument(sorted, nomesArquivo[i], nomeAlg, tempo, ordenador.contComp, ordenador.contMov);
                               if (algoritmo == 5) {
                                     break;
                               }
