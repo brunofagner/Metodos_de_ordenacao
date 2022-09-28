@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
-import metodosComplexos.ComboSort;
-import metodosComplexos.QuickSort;
-import metodosComplexos.ShellSort;
-import metodosComplexos.Ordenador;
+import metodosComplexos.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -25,9 +22,11 @@ public class Main {
                   System.out.println("5-BogoSort!");
                   System.out.println("6-ShellSort!");
                   System.out.println("7-QuickSort");
-                  System.out.println("8-Sair!");
+                  System.out.println("8-MergeSort");
+                  System.out.println("9-HeapSort");
+                  System.out.println("10-Sair!");
                   int algoritmo = input.nextInt();
-                  if (algoritmo == 8) {
+                  if (algoritmo == 10) {
                         break;
                         
                   }
@@ -71,6 +70,12 @@ public class Main {
                               }else if (algoritmo == 7) {
                                     ordenador = new QuickSort();
                                     nomeAlg = "QuickSort";
+                              }else if (algoritmo == 8) {
+                                    ordenador = new MergeSort();
+                                    nomeAlg = "MergeSort";
+                              }else if (algoritmo == 9) {
+                                    ordenador = new HeapSort();
+                                    nomeAlg = "HeapSort";
                               } else {
                                     break;
                               }
