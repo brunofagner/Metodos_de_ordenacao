@@ -7,7 +7,8 @@ public class ShellSort extends Ordenador{
 
             while (h < n) {
                   h = h * 3 + 1;
-                  contComp++;
+                  contComp
+                  ++;
             }
             h = h / 3;
             int c, j;
@@ -15,18 +16,22 @@ public class ShellSort extends Ordenador{
                   for (int i = h; i < n; i++) {
                         c = array[i];
                         j = i;
-                        contComp += 2;
+                        contComp
+                         += 2;
                         while (j >= h && array[j - h] > c) {
                               array[j] = array[j - h];
                               contMov++;
                               j = j - h;
-                              contComp++;
+                              contComp
+                              ++;
                         }
                         array[j] = c;
-                        contComp++;
+                        contComp
+                        ++;
                   }
                   h = h / 2;
-                  contComp++;
+                  contComp
+                  ++;
             }
             return array;
       }

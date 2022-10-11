@@ -25,6 +25,8 @@ public class Main {
                   System.out.println("8-MergeSort!");
                   System.out.println("9-HeapSort!");
                   System.out.println("10-GnomeSort!");
+                  System.out.println("11-RadixSort!");
+                  System.out.println("12-CountingSort!");
                   System.out.println("14-Sair!");
                   int algoritmo = input.nextInt();
                   if (algoritmo > 13) {
@@ -80,6 +82,12 @@ public class Main {
                               }else if (algoritmo == 10) {
                                     ordenador = new GnomeSort();
                                     nomeAlg = "GnomeSort";
+                              } else if (algoritmo == 11) {
+                                    ordenador = new RadixSort();
+                                    nomeAlg = "RadixSort";
+                              } else if (algoritmo == 12) {
+                                    ordenador = new CountingSort();
+                                    nomeAlg = "CountingSort";
                               } else {
                                     break;
                               }
