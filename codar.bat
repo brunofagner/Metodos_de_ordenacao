@@ -1,0 +1,2 @@
+@echoff
+code .

@@ -27,6 +27,7 @@ public class Main {
                   System.out.println("10-GnomeSort!");
                   System.out.println("11-RadixSort!");
                   System.out.println("12-CountingSort!");
+                  System.out.println("13-BucketSort!");
                   System.out.println("14-Sair!");
                   int algoritmo = input.nextInt();
                   if (algoritmo > 13) {
@@ -88,6 +89,9 @@ public class Main {
                               } else if (algoritmo == 12) {
                                     ordenador = new CountingSort();
                                     nomeAlg = "CountingSort";
+                              }else if (algoritmo == 13) {
+                                    ordenador = new BucketSort();
+                                    nomeAlg = "BucketSort";
                               } else {
                                     break;
                               }

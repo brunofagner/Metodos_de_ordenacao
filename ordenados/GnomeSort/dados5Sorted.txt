@@ -1,6 +1,0 @@
-Nome do aluno: Bruno Fagner Alves de Carvalho e Costa
-Nome do Algoritmo: GnomeSort
-Tempo de Execucao: 00:00:00:00
-Quantidade de comparacoes: 15
-Quantidade de Movimentacoes: 10
-[-13805, 3724, 3945, 5371, 16190, ]

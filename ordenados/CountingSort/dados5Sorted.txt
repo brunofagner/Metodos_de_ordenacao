@@ -1,6 +1,0 @@
-Nome do aluno: Bruno Fagner Alves de Carvalho e Costa
-Nome do Algoritmo: CountingSort
-Tempo de Execucao: 00:00:00:00
-Quantidade de comparacoes: 0
-Quantidade de Movimentacoes: 10
-[0, 17529, 17750, 19176, 29995, ]
