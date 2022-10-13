@@ -28,9 +28,11 @@ public class Main {
                   System.out.println("11-RadixSort!");
                   System.out.println("12-CountingSort!");
                   System.out.println("13-BucketSort!");
-                  System.out.println("14-Sair!");
+                  System.out.println("14-CocktailSort!");
+                  System.out.println("15-TimSort!");
+                  System.out.println("16-Sair!");
                   int algoritmo = input.nextInt();
-                  if (algoritmo > 13) {
+                  if (algoritmo > 15) {
                         break;
                         
                   }
@@ -92,6 +94,12 @@ public class Main {
                               }else if (algoritmo == 13) {
                                     ordenador = new BucketSort();
                                     nomeAlg = "BucketSort";
+                              }else if (algoritmo == 14) {
+                                    ordenador = new CocktailSort();
+                                    nomeAlg = "CocktailSort";
+                              }else if (algoritmo == 15) {
+                                    ordenador = new TimSort();
+                                    nomeAlg = "TimSort";
                               } else {
                                     break;
                               }
