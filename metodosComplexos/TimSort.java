@@ -6,10 +6,9 @@ public class TimSort extends Ordenador {
       public int[] sort(int[] array) {
             return timSort(array);
       }
-
       static int MIN_MERGE = 32;
 
-      public static int minRunLength(int n) {
+      public int minRunLength(int n) {
             assert n >= 0;
 
             // Becomes 1 if any 1 bits are shifted off
@@ -23,7 +22,7 @@ public class TimSort extends Ordenador {
 
       // This function sorts array from left index to
       // to right index which is of size atmost RUN
-      public static void insertionSort(int[] arr, int left,
+      public void insertionSort(int[] arr, int left,
                   int right) {
             for (int i = left + 1; i <= right; i++) {
                   int temp = arr[i];
@@ -31,13 +30,14 @@ public class TimSort extends Ordenador {
                   while (j >= left && arr[j] > temp) {
                         arr[j + 1] = arr[j];
                         j--;
+                        contMov++;
                   }
                   arr[j + 1] = temp;
             }
       }
 
       // Merge function merges the sorted runs
-      public static void merge(int[] arr, int l,
+      public void merge(int[] arr, int l,
                   int m, int r) {
             // Original array is broken in two parts
             // left and right array
@@ -46,9 +46,11 @@ public class TimSort extends Ordenador {
             int[] right = new int[len2];
             for (int x = 0; x < len1; x++) {
                   left[x] = arr[l + x];
+                  contMov++;
             }
             for (int x = 0; x < len2; x++) {
                   right[x] = arr[m + 1 + x];
+                  contMov++;
             }
 
             int i = 0;
@@ -58,10 +60,13 @@ public class TimSort extends Ordenador {
             // After comparing, we merge those two array
             // in larger sub array
             while (i < len1 && j < len2) {
+                  contComp++;
                   if (left[i] <= right[j]) {
+                        contMov++;
                         arr[k] = left[i];
                         i++;
                   } else {
+                        contMov++;
                         arr[k] = right[j];
                         j++;
                   }
@@ -71,6 +76,7 @@ public class TimSort extends Ordenador {
             // Copy remaining elements
             // of left, if any
             while (i < len1) {
+                  contMov++;
                   arr[k] = left[i];
                   k++;
                   i++;
@@ -79,6 +85,7 @@ public class TimSort extends Ordenador {
             // Copy remaining element
             // of right, if any
             while (j < len2) {
+                  contMov++;
                   arr[k] = right[j];
                   k++;
                   j++;
